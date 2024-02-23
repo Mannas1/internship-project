@@ -16,7 +16,7 @@ const AuthLayout = () => {
                     </div>
                    
                 </div>
-                <div className="bg-yellow-200 w-1/2 h-full max-md:hidden">
+                <div className="bg-gray-400 w-1/2 h-full max-md:hidden">
 
                 </div>
 

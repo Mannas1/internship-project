@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        tech: "/tech-1.jpg"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
