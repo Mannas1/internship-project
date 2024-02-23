@@ -38,7 +38,7 @@ const SignUp = () => {
    
     // 2. Define a submit handler.
     async function onSubmit(values: z.infer<typeof formSchema>) {
-      const response = await signUpUser(values.email, values.password, values.username);
+     await signUpUser(values.email, values.password, values.username);
       toast({
         title: "Account create, please login to continue",
         variant: "default"
