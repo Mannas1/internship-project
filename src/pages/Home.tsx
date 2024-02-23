@@ -1,6 +1,5 @@
 import { listAllDocuments } from "@/appwrite/appwrite"
 import Navbar from "@/components/common/Navbar"
-import { useEffect } from "react"
 
 const Home = () => {
   

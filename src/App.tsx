@@ -1,5 +1,5 @@
 
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import AuthLayout from './pages/Auth/AuthLayout'
 import Login from './pages/Auth/Login'
@@ -10,11 +10,8 @@ import CreatePost from './pages/CreatePost'
 
 
 function App() {
-  const navigate = useNavigate();
 
-  const redirect = () => {
-    navigate("/");
-  }
+ 
   return (
     <Routes>
       {localStorage.getItem("cookieFallback") ? (

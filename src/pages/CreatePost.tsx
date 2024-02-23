@@ -1,4 +1,3 @@
-import { MyDropzone } from '@/components/common/Dropzone'
 import Navbar from '@/components/common/Navbar'
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"

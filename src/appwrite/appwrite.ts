@@ -1,6 +1,5 @@
 import { account, databases } from "./utils";
 import { ID } from "appwrite";
-import { UserContext } from "@/context/userContext";
 
 export const docId = import.meta.env.VITE_DATABASE_ID;
 export const collectionId = import.meta.env.VITE_USER_COLLECTION_ID;
