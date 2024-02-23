@@ -1,6 +1,5 @@
 import { MyDropzone } from '@/components/common/Dropzone'
 import Navbar from '@/components/common/Navbar'
-import * as React from "react"
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
@@ -12,11 +11,21 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
+import { useState } from 'react'
+import { createUserData } from '@/appwrite/appwrite'
 
 
 const CreatePost = () => {
-    const [date, setDate] = React.useState<Date>()
+    const [date, setDate] = useState<Date>()
+    const [title, setTitle] = useState("");
+    const [desc, setDesc] = useState("");
 
+    const onSubmit = () => {
+        const response = createUserData(title, desc);
+        console.log(response);
+        
+    }
+ 
     return (
         <div className=''>
             <Navbar />
@@ -27,15 +36,15 @@ const CreatePost = () => {
                     <div className='w-full flex flex-col gap-4 items-center'>
                         <div className='bg-yellow-30 w-1/3'>
                             <p className='text-lg'>Title</p>
-                            <input type="text" className='border border-black rounded-sm w-full p-2' />
+                            <input type="text" className='border border-black rounded-sm w-full p-2' onChange={(e) => setTitle(e.target.value)}/>
                         </div>
                         <div className='bg-yellow-30 w-1/3'>
                             <p className='text-lg'>Description</p>
-                            <textarea className='border border-black rounded-sm w-full p-2 text-sm' />
+                            <textarea className='border border-black rounded-sm w-full p-2 text-sm' onChange={(e) => setDesc(e.target.value)}/>
                         </div>
                         {/* <MyDropzone /> */}
                         <div className='flex gap-2'>
-                            <button className='bg-slate-200 px-3 py-2 rounded-md'>
+                            <button className='bg-slate-200 px-3 py-2 rounded-md' onClick={onSubmit}>
                                 Post now
                             </button>
 
